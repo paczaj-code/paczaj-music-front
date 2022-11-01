@@ -1,0 +1,75 @@
+@import "variables";
+
+//Buttons
+.button {
+    border: none;
+    outline: none;
+    position: fixed;
+    z-index: 200;
+    width: 35px;
+    height: 35px;
+    top: 3px;
+    cursor: pointer;
+
+    &::before {
+        font-family: "icomoon" !important;
+        font-size: 1.8rem;
+    }
+
+    &__show-menu {
+        background: $bg02;
+        left: 0;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 5px 0 7px 0px rgba(0, 0, 0, 0.534);
+        &::before {
+            content: "\e9bb";
+            // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.637);
+        }
+    }
+
+    &__homepage {
+        background: $bg03;
+        right: 0;
+        border-radius: 5px 0 0 5px;
+        box-shadow: -2px 2px 7px 0px rgba(10, 10, 10, 0.534);
+        &::before {
+            font-size: 2.1rem;
+            content: "\e909";
+            margin-top: -3px;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .button__show-menu {
+        display: none;
+    }
+}
+
+// Dividers
+.section__divider,
+.panel__divider {
+    border-color: rgba(65, 65, 65, 0.575);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.788) inset;
+    border-width: 1px;
+    border-style: inset;
+    margin-bottom: 20px;
+    &--name {
+        margin-top: -7px;
+        margin-bottom: 0;
+        border-color: #1269c7;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.753), 0 3px 3px rgba(0, 0, 0, 0.788) inset;
+        border-style: groove;
+    }
+}
+.panel__divider {
+    margin-bottom: 0;
+}
+
+//Panel
+.panel {
+    background-color: $bg04;
+    box-shadow: 0 5px 5px black, 0 0 45px -6px black inset;
+    border-radius: 10px;
+    border: solid $border01 3px;
+}
