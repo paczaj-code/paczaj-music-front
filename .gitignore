@@ -1,0 +1,7 @@
+node_modules
+coverage
+.env
+
+ssh -T GITHUB-USERNAME@github.com
+
+git remote set-url origin https://github.com/paczaj-code/paczaj-music-front.git
