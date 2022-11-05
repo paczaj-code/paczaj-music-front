@@ -14,7 +14,7 @@ const ArtistItem: React.FC<Partial<ArtistListInterface>> = ({
       className={[
         'artist-list__item',
         current === id && !isLoading ? 'artist-list__item--active' : '',
-        current !== id && isLoading ? 'artist-list__item--disabled' : '',
+        current === id && isLoading ? 'artist-list__item--loading' : '',
       ].join(' ')}
     >
       <span>{name}</span>
