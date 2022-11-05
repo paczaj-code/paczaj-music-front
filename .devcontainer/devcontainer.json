@@ -16,10 +16,12 @@
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "Orta.vscode-jest",
-        "esbenp.prettier-vscode"
-      ]
+		"dbaeumer.vscode-eslint",
+		"Orta.vscode-jest",
+		"esbenp.prettier-vscode",
+		"Gruntfuggly.todo-tree",
+		"rangav.vscode-thunder-client"
+	]
     }
   },
 
