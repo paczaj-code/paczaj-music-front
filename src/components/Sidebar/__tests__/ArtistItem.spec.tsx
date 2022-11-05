@@ -36,17 +36,20 @@ describe('Tests ArtistItem component', () => {
     expect(artistWrapper[0]).toHaveClass('artist-list__item--active');
   });
 
-  it('should be class "artist-list__item--disabled" when  is isLoading and id is not equal', () => {
+  it('should be class "artist-list__item--loading" when  is isLoading and id is equal', () => {
     render(
       <ArtistItem
         name={`${artists[1].name}`}
         id={+`${artists[1].id}`}
-        current={1}
+        current={2}
         isLoading={true}
       />
     );
-    const artistWrapper = document.querySelectorAll('.artist-list__item');
-    expect(artistWrapper[0]).toHaveClass('artist-list__item--disabled');
+    const artistItems = document.querySelectorAll('.artist-list__item');
+
+    console.log(artistItems.length);
+
+    expect(artistItems[0]).toHaveClass('artist-list__item--loading');
   });
   it('should be fired once function "onClickHandler ', () => {
     const clickFunction = jest.fn();
