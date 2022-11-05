@@ -7,7 +7,7 @@ const artists: Partial<ArtistListInterface>[] = [
   { name: 'Some artist 2', id: 2 },
 ];
 
-describe('Test ArtistItem component', () => {
+describe('Tests ArtistItem component', () => {
   it('should be proper name', () => {
     render(<ArtistItem name={`${artists[0].name}`} id={+`${artists[0].id}`} />);
     const artistWrapper = document.querySelectorAll('.artist-list__item');
