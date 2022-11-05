@@ -6,7 +6,9 @@ interface SectionTypes {
 }
 
 const Section: React.FC<SectionTypes> = ({ children, section_type }) => {
-  return <section className={`section__${section_type}`}>{children}</section>;
+  return (
+    <section className={`section section__${section_type}`}>{children}</section>
+  );
 };
 
 export default Section;
