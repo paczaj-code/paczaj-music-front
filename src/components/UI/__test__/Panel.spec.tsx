@@ -32,6 +32,6 @@ describe('Tests for Panel component', () => {
     );
 
     const panel = container.querySelector('.panel');
-    expect(panel).toHaveClass('panel--test');
+    expect(panel).toHaveClass('panel__test');
   });
 });
