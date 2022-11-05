@@ -19,7 +19,7 @@ export interface ArtistDataTypes {
   end_date_year: number | undefined;
   tags: string[] | [] | undefined;
   wikipedia_suffix: string | undefined;
-  wikipedia_data: WikipediaDataTypes | undefined;
+  wikipedia_data: { description: string | undefined };
 }
 
 export interface YoutubeMovieTypes {
