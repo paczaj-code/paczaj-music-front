@@ -40,6 +40,3 @@ const SearchArtists: React.FC<SearchArtistsTypes> = ({
 };
 
 export default SearchArtists;
-
-//TODO ukrywanie przyciski clear i zmiana ikony
-//TODO poprawić brak artysty
