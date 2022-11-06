@@ -1,7 +1,8 @@
 export interface ImageTypes {
   albumId?: number | undefined;
   image_size?: 'big' | 'small' | undefined;
-  image_url: string | undefined;
+  small_image_url: string | undefined;
+  medium_image_url: string | undefined;
   onClick?: React.MouseEventHandler;
 }
 
@@ -23,9 +24,11 @@ export interface ArtistDataTypes {
 }
 
 export interface YoutubeMovieTypes {
+  medium_image_url: string | undefined;
   small_image_url: string | undefined;
   title: string | undefined;
   youtube_id: string | undefined;
+  onClick?: React.MouseEventHandler;
 }
 
 // export interface ReleaseTypes {
