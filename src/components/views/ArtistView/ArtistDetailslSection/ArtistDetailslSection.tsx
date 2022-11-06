@@ -4,8 +4,6 @@ import parse from 'html-react-parser';
 import { AppContext } from '../../../../context/AppContext';
 import Heading from '../../../UI/Heading/Heading';
 import Divider from '../../../UI/Divider/Divider';
-import Panel from '../../../UI/Panel/Panel';
-import { WikipediaDataTypes } from '../../../../types/interfaces';
 import Button from '../../../UI/Button/Buttons';
 import InfoPanel from './InfoPanel';
 
@@ -33,8 +31,6 @@ const ArtistDetailsSection: React.FC<ArtistDetailsSectionTypes> = ({
   const [wikiInfoHeight, setWikiInfoHeight] = useState<number | null>(null);
   const { chosenArtistId } = useContext(AppContext);
 
-  console.log(showMore);
-
   useEffect(() => {
     const wikiHeight = document.querySelector(
       '.wikipedia__desctription__text'
@@ -49,8 +45,6 @@ const ArtistDetailsSection: React.FC<ArtistDetailsSectionTypes> = ({
       buttonShowMore?.classList.remove('button--show__more--hidden');
     }
   }, []);
-
-  console.log(wikiInfoHeight);
 
   useEffect(() => {
     setShowMore(false);
