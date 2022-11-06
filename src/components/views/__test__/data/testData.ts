@@ -49,4 +49,23 @@ export const artistDetailsData = {
   tags: ['indie', 'punk'],
 };
 
-// export const;
+export const yotubeExampleData = [
+  {
+    youtube_id: 'bMHHCpQ9M-Y',
+    medium_image_url: 'https://i.ytimg.com/vi/bMHHCpQ9M-Y/hqdefault.jpg',
+    small_image_url: 'https://i.ytimg.com/vi/bMHHCpQ9M-Y/mqdefault.jpg',
+    title: 'Maximo Park - Our Velocity',
+  },
+  {
+    youtube_id: '-Ue193sAcrE',
+    medium_image_url: 'https://i.ytimg.com/vi/-Ue193sAcrE/hqdefault.jpg',
+    small_image_url: 'https://i.ytimg.com/vi/-Ue193sAcrE/mqdefault.jpg',
+    title: 'Maximo Park - Apply Some Pressure',
+  },
+  {
+    youtube_id: 'gQkW29Yzd6I',
+    medium_image_url: 'https://i.ytimg.com/vi/gQkW29Yzd6I/hqdefault.jpg',
+    small_image_url: 'https://i.ytimg.com/vi/gQkW29Yzd6I/mqdefault.jpg',
+    title: 'Maximo Park - All Of Me (Official Video)',
+  },
+];
