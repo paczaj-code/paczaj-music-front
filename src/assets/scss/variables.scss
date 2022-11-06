@@ -15,3 +15,9 @@ $border02: #1a1d21;
 $border03: #30353b;
 
 $sidebar-width: 270px;
+
+$youtube_small_width: 250px;
+$youtube_small_height: calc(180 * $youtube_small_width / 320);
+
+$youtube_big_width: 320px;
+$youtube_big_height: 180px;
