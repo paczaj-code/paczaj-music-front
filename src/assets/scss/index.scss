@@ -2,16 +2,10 @@
 @import "./layout/index.scss";
 @import "./UI/index.scss";
 @import "typography";
-// @import "artist-list";
-
-// @import "fonts";
-// @import "loaders";
-// @import "sections";
+@import "./views//index";
 @import "animations";
 
-// @import "artist-page/artist-page";
-// @import "UIelements";
-// *,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -26,7 +20,7 @@ body {
     position: relative;
     min-height: 100vh;
     background-color: $bg01;
-    overflow-y: auto;
+    overflow-y: scroll;
     min-height: 100vh;
 
     * {
@@ -49,4 +43,9 @@ body {
         box-shadow: 0 0 7px hsla(0, 0%, 0%, 0.7) inset;
         border-radius: 100px;
     }
+}
+
+
+body:has(.player) {
+    overflow: hidden;
 }
