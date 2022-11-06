@@ -1,0 +1,19 @@
+.section {
+    position: relative;
+    // z-index: 100;
+    padding: 0 20px;
+
+    >.content,
+    >.wikipedia {
+        max-width: 1500px;
+        padding: 20px 0;
+    }
+}
+
+.artist__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // max-width: 1406px;
+
+}

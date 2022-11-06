@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.button {
+    cursor: pointer;
+
+    &--homepage,
+    &--show-menu {
+        border: none;
+        outline: none;
+        position: fixed;
+        z-index: 200;
+        width: 35px;
+        height: 35px;
+        top: 3px;
+
+    }
+
+    &::before {
+        font-family: "icomoon" !important;
+        font-size: 1.8rem;
+    }
+
+    &--show-menu {
+        background: $bg02;
+        left: 0;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 5px 0 7px 0px rgba(0, 0, 0, 0.534);
+
+        &::before {
+            content: "\e9bb";
+        }
+    }
+
+    &--homepage {
+        background: $bg03;
+        right: 0;
+        border-radius: 5px 0 0 5px;
+        box-shadow: -2px 2px 7px 0px rgba(10, 10, 10, 0.534);
+
+        &::before {
+            font-size: 2.1rem;
+            content: "\e909";
+            margin-top: -3px;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .button--show-menu {
+        display: none;
+    }
+}
+
+.button--show__more {
+    background-color: transparent;
+    border: dashed 1px darken($primary, 20%);
+
+    // border: none;
+    outline: none;
+    padding: 5px 7px;
+    border-radius: 15px;
+
+    // box-shadow: 0 3px 5px -2px black;
+    &--hidden {
+        visibility: hidden;
+    }
+}

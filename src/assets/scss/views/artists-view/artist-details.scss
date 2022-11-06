@@ -1,0 +1,102 @@
+@import '../../variables.scss';
+
+.wikipedia__desctription {
+    >.wikipedia__desctription__text {
+        max-height: 190px;
+        overflow: hidden;
+
+        &--expanded {
+            overflow: hidden;
+        }
+    }
+
+    i {
+        color: $secondary;
+    }
+}
+
+.wikipedia__desctription__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wikipedia__link {
+        color: $primary;
+    }
+}
+
+.wikipedia__info {
+    padding: 10px 0;
+}
+
+.panel__info__item {
+    display: flex;
+    justify-items: center;
+    padding: 5px 10px;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    >.panel__info__title {
+        margin-right: 10px;
+        font-weight: bold;
+
+        >i {
+            margin-right: 5px;
+        }
+    }
+
+    >.panel__info__item__country {
+        >img {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+
+    >.panel__info__item_tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 6px;
+    }
+}
+
+.tag {
+    font-size: 1.2rem;
+    background-image: linear-gradient(darken($primary, 10%),
+            darken($primary, 30%));
+    padding: 2px 4px 4px 4px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(34, 34, 34, 0.685);
+}
+
+@media only screen and (min-width: 700px) {
+    .wikipedia {
+        display: flex;
+        gap: 50px;
+    }
+
+    .wikipedia__desctription {
+        flex: 1;
+    }
+
+    .wikipedia__info {
+        flex: 1;
+        max-width: 200px;
+        align-self: flex-start;
+        // margin-top: 10px;
+        margin-right: 30px;
+    }
+
+    .panel__info {
+        // padding: 5px 0;
+    }
+
+    .panel__info__item {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+}
