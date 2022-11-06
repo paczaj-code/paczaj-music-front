@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import ArtistDetailsSection from '../../ArtistView/ArtistDetailslSection/ArtistDetailslSection';
 import { artistDetailsData } from '../data/testData';
 
-describe('Name of the group', () => {
+describe('Tests for ArtistDetailsSection', () => {
   beforeEach(() => {
     render(
       <ArtistDetailsSection
@@ -53,7 +53,6 @@ describe('Name of the group', () => {
 
   it('should be wikipedia link', () => {
     const wikiLink = screen.getByRole('link');
-    console.log(wikiLink);
 
     expect(wikiLink).toBeInTheDocument();
     expect(wikiLink).toHaveAttribute(

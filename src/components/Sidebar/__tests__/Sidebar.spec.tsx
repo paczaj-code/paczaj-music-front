@@ -1,7 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Sidebar from '../Sidebar';
 import userEvent from '@testing-library/user-event';
-import { wait } from '@testing-library/user-event/dist/utils';
 import { AppContext } from '../../../context/AppContext';
 import { testContextValues } from '../../../__test__/test-utils';
 
@@ -81,7 +80,7 @@ describe('Tests for ArtistsList component', () => {
     expect(clearIcon).toBeInTheDocument();
 
     userEvent.click(clearIcon!);
-    wait();
+    // wait();
     expect(screen.getByRole('textbox', { name: 'searchArtists' })).toHaveValue(
       ''
     );
@@ -91,7 +90,6 @@ describe('Tests for ArtistsList component', () => {
 
   it('should be setChosenArtistId function ', () => {
     const items = screen.getAllByRole('listitem');
-    // console.log(items[0]);
 
     userEvent.click(items[1]);
     expect(testContextValues.setChosenArtistId).toBeCalledTimes(1);

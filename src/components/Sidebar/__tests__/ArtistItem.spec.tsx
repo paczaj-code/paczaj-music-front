@@ -47,8 +47,6 @@ describe('Tests ArtistItem component', () => {
     );
     const artistItems = document.querySelectorAll('.artist-list__item');
 
-    console.log(artistItems.length);
-
     expect(artistItems[0]).toHaveClass('artist-list__item--loading');
   });
   it('should be fired once function "onClickHandler ', () => {
