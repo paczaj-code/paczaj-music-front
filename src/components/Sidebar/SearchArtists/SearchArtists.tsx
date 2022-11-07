@@ -31,7 +31,7 @@ const SearchArtists: React.FC<SearchArtistsTypes> = ({
         <i
           title="icon-reset"
           role="button"
-          className="icon-cancel-circle icon__clear-search"
+          className="icon-cancel icon__clear-search"
           onClick={clearInputHandler}
         ></i>
       )}

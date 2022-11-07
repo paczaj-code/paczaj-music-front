@@ -62,7 +62,8 @@ const Sidebar: React.FC<CT> = ({ artist_list }) => {
           <SearchArtists onInput={inputValueHandler} placeholder="Szukaj" />
           {artist_list && filteredArtistLists!.length === 0 && (
             <h3 className="artist-not-found">
-              <i className="icon-exclamation-circle"></i>Nie znaleziono artysty
+              <i className="icon-exclamation-triangle"></i>Nie znaleziono
+              artysty
             </h3>
           )}
           <ul className="artist-list__items">
