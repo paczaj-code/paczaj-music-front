@@ -2,8 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import Section from '../../../../components/UI/Section/Section';
 import parse from 'html-react-parser';
 import { AppContext } from '../../../../context/AppContext';
-import Heading from '../../../UI/Heading/Heading';
-import Divider from '../../../UI/Divider/Divider';
 import Button from '../../../UI/Button/Buttons';
 import InfoPanel from './InfoPanel';
 
@@ -51,9 +49,7 @@ const ArtistDetailsSection: React.FC<ArtistDetailsSectionTypes> = ({
   }, [chosenArtistId]);
 
   return (
-    <Section section_type="artists-details">
-      <Heading heading_type="artist__name" title={artist_name} />
-      <Divider classes="artist__name" />
+    <Section section_type="artists-details" title={artist_name}>
       <div className="wikipedia">
         <div className="wikipedia__desctription">
           <p
