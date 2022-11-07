@@ -1,26 +1,34 @@
 @import '../../variables.scss';
 
-// .section__youtube__movies {
-//     display: flex;
-//     gap: 20px;
-//     // overflow: scroll;
-//     // overflow-y: scroll;
-//     // overflow-x: scroll;
-//     padding-bottom: 30px;
-
-// }
 
 .section__youtube {
     .content {
         padding-top: 20px;
         display: flex;
-        // padding: 0 20px;
-        // flex-wrap: wrap;
         gap: 20px;
-        // align-content: center;
-        // justify-content: center;
-        // justify-items: center;
         overflow-x: scroll;
+        margin-bottom: 50px;
+
+        &::-webkit-scrollbar {
+            // width: 3px;
+            height: 5px;
+            // cursor: w-resize;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(to top,
+                    darken($primary, 7%),
+                    darken($primary, 12%));
+            box-shadow: 0 0px 5px 1px hsla(0, 0%, 0%, 0.2),
+                0 0 15px -5px hsl(0, 0%, 0%) inset;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: hsl(0, 0%, 21%);
+            box-shadow: 0 0 7px hsla(0, 0%, 0%, 0.7) inset;
+            border-radius: 100px;
+        }
     }
 }
 
@@ -28,9 +36,6 @@
     position: relative;
     width: 320px;
     cursor: pointer;
-
-
-    // opacity: 0;
 
     &__image {
         position: relative;
@@ -42,25 +47,19 @@
         box-shadow: 0 2px 20px black;
         opacity: 0;
         border: solid 2px $border02;
-        // transition: all 0.2s linear;
-
 
         &--loaded {
             opacity: 1;
             transition: opacity 0.7s ease;
-
         }
 
         &:hover {
-            // border-color: darken($primary, 30%);
-            // box-shadow: 0 2px 30px black;
             filter: opacity(0.75) saturate(1.5);
             transition: all 0.2s linear;
         }
 
-
         &::after {
-            content: "wreer";
+            content: 'wreer';
             position: absolute;
             top: 0;
             left: 0;
@@ -76,23 +75,10 @@
         max-width: 320px;
         padding-right: 10px;
         margin: 0;
-        // margin-bottom: ;
         font-weight: bold;
         text-shadow: 0 3px 2px black;
     }
 }
-
-// .panel__youtube {
-//     min-width: $youtube_small_width;
-//     height: $youtube_small_height;
-//     overflow: hidden;
-
-//     >img {
-//         min-width: $youtube_small_width;
-//         height: inherit;
-
-//     }
-// }
 
 @media only screen and (min-width: 700px) {
     .section__youtube {
@@ -108,9 +94,9 @@
     .section__youtube {
         .content {
             gap: 30px;
-
             align-content: center;
             justify-content: flex-start;
+            padding-left: 20px;
         }
     }
 }
@@ -118,23 +104,15 @@
 .player {
     position: fixed;
     opacity: 0;
-    // top: 30px;
-    // left: 0;
-    // transform: translate(calc(50vw - 50%));
     z-index: 1002;
-    // height: calc(80vw * 9 / 16);
-    // height: 300px;
     left: 50%;
     margin-top: 3vw;
     transform: translate(-50%, 0);
     box-shadow: 0 5px 10px black;
     border-radius: 20px;
     overflow: hidden;
-    // padding: 0;
     background-color: black;
-    border: solid 3px $border03;
-    // box-shadow: 0 0 30px black inset;
-
+    border: solid 3px $border01;
 
     >iframe {
         width: 80vw !important;
@@ -142,6 +120,13 @@
         max-width: 900px;
         max-height: calc(900px * 9 / 16);
         margin-bottom: -5px;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    .player {
+        margin-top: 0 !important;
 
     }
+
 }
