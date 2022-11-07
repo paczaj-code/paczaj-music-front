@@ -31,7 +31,13 @@ const YoutubeModal = () => {
         mountOnEnter
         appear
       >
-        <YouTube videoId={chosenYoutubeId} opts={opts} className="player" />
+        <YouTube
+          onEnd={() => setChosenYoutubeId(undefined)}
+          videoId={chosenYoutubeId}
+          opts={opts}
+          className="player"
+          title="werwer"
+        />
       </CSSTransition>
     </>
   );
