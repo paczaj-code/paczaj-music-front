@@ -52,6 +52,7 @@
         background-size: cover;
         background-position: 80%;
         background-repeat: no-repeat;
+        background-attachment: fixed;
 
         &__data-loaded {
             &::after {
