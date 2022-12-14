@@ -13,4 +13,6 @@ export interface AppContextTypes {
   >;
   chosenYoutubeId: string | undefined;
   setChosenYoutubeId: React.Dispatch<React.SetStateAction<string | undefined>>;
+  chosenReleaseId: number | undefined;
+  setChosenReleaseId: React.Dispatch<React.SetStateAction<number | undefined>>;
 }

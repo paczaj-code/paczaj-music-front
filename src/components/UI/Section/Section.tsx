@@ -27,7 +27,7 @@ const Section: React.FC<SectionTypes> = ({
           <Divider classes={section_type} />
         </>
       )}
-      {children}
+      <div className="content">{children}</div>
     </section>
   );
 };

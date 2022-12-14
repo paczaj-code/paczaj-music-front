@@ -13,6 +13,8 @@ export const AppContext = React.createContext<AppContextTypes>({
   setLoadingType: () => {},
   chosenYoutubeId: undefined,
   setChosenYoutubeId: () => {},
+  chosenReleaseId: undefined,
+  setChosenReleaseId: () => {},
 });
 
 const AppContextProvider: React.FC<ChildrenTypes> = ({ children }) => {
@@ -28,6 +30,9 @@ const AppContextProvider: React.FC<ChildrenTypes> = ({ children }) => {
     undefined
   );
 
+  const [chosenReleaseId, setChosenReleaseId] = useState<number | undefined>(
+    undefined
+  );
   const initContextValue: AppContextTypes = {
     chosenArtistId,
     setChosenArtistId,
@@ -35,6 +40,8 @@ const AppContextProvider: React.FC<ChildrenTypes> = ({ children }) => {
     setLoadingType,
     chosenYoutubeId,
     setChosenYoutubeId,
+    chosenReleaseId,
+    setChosenReleaseId,
   };
   return (
     <AppContext.Provider value={initContextValue}>

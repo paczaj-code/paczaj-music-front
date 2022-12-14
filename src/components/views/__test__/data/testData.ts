@@ -69,3 +69,27 @@ export const yotubeExampleData = [
     title: 'Maximo Park - All Of Me (Official Video)',
   },
 ];
+
+export const albumsExampleData = [
+  {
+    id: 2786485,
+    name: 'Things Are Great',
+    first_release_date: 2022,
+    front_small:
+      'https://archive.org/download/mbid-002276e8-35e4-4811-97b7-80e765b5e0d0/mbid-002276e8-35e4-4811-97b7-80e765b5e0d0-31890914734_thumb250.jpg',
+  },
+  {
+    id: 1648354,
+    name: 'Why Are You OK',
+    first_release_date: 2016,
+    front_small:
+      'https://archive.org/download/mbid-2158470c-710a-4990-8575-86086cef634a/mbid-2158470c-710a-4990-8575-86086cef634a-13988194611_thumb250.jpg',
+  },
+  {
+    id: 1178152,
+    name: 'Mirage Rock',
+    first_release_date: 2012,
+    front_small:
+      'https://archive.org/download/mbid-7435e58d-ac6d-4f42-84b2-dce0f26aac43/mbid-7435e58d-ac6d-4f42-84b2-dce0f26aac43-12818124762_thumb250.jpg',
+  },
+];

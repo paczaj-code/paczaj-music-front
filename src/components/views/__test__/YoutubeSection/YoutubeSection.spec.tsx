@@ -12,7 +12,7 @@ describe('Tests for YoutubeSection component', () => {
 
   it('should be proper title', () => {
     expect(screen.getByRole('heading')).toBeInTheDocument();
-    expect(screen.getByRole('heading').innerHTML).toEqual('Youtube');
+    expect(screen.getByRole('heading').innerHTML).toContain('Youtube');
   });
   it('should be 3 images', () => {
     expect(screen.getAllByRole('img').length).toEqual(3);

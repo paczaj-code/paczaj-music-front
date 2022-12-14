@@ -16,15 +16,8 @@ const App = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showHompage, setShowHompage] = useState<boolean>(true);
 
-  const {
-    loadingType,
-    setLoadingType,
-    chosenArtistId,
-    setChosenArtistId,
-    chosenYoutubeId,
-  } = useContext(AppContext);
-
-  console.log(chosenYoutubeId);
+  const { loadingType, setLoadingType, chosenArtistId, setChosenArtistId } =
+    useContext(AppContext);
 
   const { isLoading } = useAxios(null, { url: 'init-data' }, setInitData, 1500);
 

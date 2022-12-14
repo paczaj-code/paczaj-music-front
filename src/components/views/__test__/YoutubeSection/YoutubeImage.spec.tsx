@@ -1,8 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import YoutubeImage from '../../ArtistView/YoutubeSection/YoutubeImage';
-import { AppContext } from '../../../../context/AppContext';
-import { testContextValues } from '../../../../__test__/test-utils';
+
 import { yotubeExampleData } from '../data/testData';
 
 const YoutubeData = yotubeExampleData[0];

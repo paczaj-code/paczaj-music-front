@@ -26,8 +26,8 @@ describe('Tests for ArtistDetailsSection', () => {
 
   it('should be heading with proper artist name', () => {
     const artistName = screen.getByRole('heading');
-    expect(artistName).toHaveClass('heading--artist__name');
-    expect(artistName.innerHTML).toEqual(artistDetailsData.artist_name);
+    expect(artistName).toHaveClass('heading--artists-details');
+    expect(artistName.innerHTML).toContain(artistDetailsData.artist_name);
   });
 
   it('should be wikipedia text', () => {

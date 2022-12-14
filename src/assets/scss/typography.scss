@@ -36,6 +36,8 @@ p {
 
 
 
+
+
 @font-face {
     font-family: "icomoon";
     src: url("../fonts/icomoon.eot?vqkyf8");
@@ -130,35 +132,20 @@ p {
 }
 
 
-// [class^="icon-"],
-// [class*=" icon-"] {
-//     /* use !important to prevent issues with browser extensions that change fonts */
-//     font-family: "icomoon" !important;
-//     // speak: never;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-variant: normal;
-//     text-transform: none;
-//     line-height: 1;
 
-//     /* Better Font Rendering =========== */
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
+.icon-rotate {
+    animation: rotation 1.3s infinite linear;
+}
 
-// .icon-rotate {
-//     animation: rotation 1.3s infinite linear;
-// }
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
 
-// @keyframes rotation {
-//     from {
-//         transform: rotate(0deg);
-//     }
-
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 // .icon-home-outline:before {
 //     content: "\e909";

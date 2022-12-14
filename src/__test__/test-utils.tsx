@@ -8,4 +8,6 @@ export const testContextValues: AppContextTypes = {
   setLoadingType: jest.fn(),
   chosenYoutubeId: undefined,
   setChosenYoutubeId: jest.fn(),
+  chosenReleaseId: undefined,
+  setChosenReleaseId: jest.fn(),
 };

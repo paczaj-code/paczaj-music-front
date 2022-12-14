@@ -1,26 +1,29 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AppContext } from '../../../context/AppContext';
 import useAxios from '../../../hooks/useAxios';
+import { Helmet } from 'react-helmet';
 import ArtistDetailsSection from './ArtistDetailslSection/ArtistDetailslSection';
 import {
   ArtistDataTypes,
   YoutubeMovieTypes,
-  //   ReleaseTypes,
+  ReleaseTypes,
+  ReleaseDetailsTypes,
 } from '../../../types/interfaces';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import { CSSTransition } from 'react-transition-group';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
 import YoutubeModal from './Modals/YoutubeModal';
+import AlbumSection from './AlbumSection/AlbumSection';
+import ReleaseModal from './Modals/ReleaseModal';
 
 interface ArtistDetailTypes {
   artist_data: ArtistDataTypes | undefined;
-  // wikipedia_data:
   youtube_movies: YoutubeMovieTypes[];
-  //   releases: {
-  //     studio_albums: ReleaseTypes[];
-  //     extended_plays: ReleaseTypes[];
-  //     compilations: ReleaseTypes[];
-  //   };
+  releases: {
+    studio_albums: ReleaseTypes[];
+    extended_plays: ReleaseTypes[];
+    compilations: ReleaseTypes[];
+  };
 }
 
 const ArtistsView = () => {
@@ -28,7 +31,7 @@ const ArtistsView = () => {
     ArtistDetailTypes | undefined
   >(undefined);
 
-  const { chosenArtistId, loadingType, setLoadingType } =
+  const { chosenArtistId, loadingType, setLoadingType, chosenReleaseId } =
     useContext(AppContext);
 
   const { isLoading } = useAxios(
@@ -48,9 +51,14 @@ const ArtistsView = () => {
       }, 0);
   }, [isLoading, setLoadingType, loadingType?.artist]);
 
+  // console.log(releaseDetails);
+
   const nodeRef = useRef(null);
   return (
     <>
+      <Helmet>
+        <title>{artistDetails?.artist_data?.artist_name}</title>
+      </Helmet>
       <Backdrop trigger={loadingType?.artist} type="artist" withIconLoader />
       <CSSTransition
         in={!loadingType?.artist && Boolean(artistDetails)}
@@ -74,9 +82,27 @@ const ArtistsView = () => {
             tags={artistDetails?.artist_data?.tags}
           />
           <YoutubeSection moviesData={artistDetails?.youtube_movies} />
-          <YoutubeModal />
+          <AlbumSection
+            title="Albumy studyjne"
+            releases={artistDetails?.releases.studio_albums}
+          />
+          {artistDetails?.releases.extended_plays.length && (
+            <AlbumSection
+              title="Epki"
+              releases={artistDetails?.releases.extended_plays}
+            />
+          )}
+          {artistDetails?.releases.compilations.length && (
+            <AlbumSection
+              title="Kompilacje"
+              releases={artistDetails?.releases.compilations}
+            />
+          )}
         </div>
       </CSSTransition>
+
+      <ReleaseModal />
+      <YoutubeModal />
     </>
   );
 };
